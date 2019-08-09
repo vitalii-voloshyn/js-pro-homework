@@ -9,23 +9,16 @@
 
 
 // Решение:
-
-
-//-----------------------------------------------
-
-// Инициализируем переменные с арифметическими операциями
-//  let add,
-//      sub,
-//      mult,
-//      div;
-//--------------------------------------------------
-
-
+//-------------------------
+// function add() {     
+//   return num + num;
+// };
+//--------------------------
 // Спрашеваем какое действие выполнять
  let answer = prompt('What do you want, add,sub,muit, or div?', '');
 
  while (answer == '' || answer == null) {
-   answer = prompt('What do you want, add,sub,muit, or div ?', '');
+   answer = prompt('select action!', '');
    
  };
 
@@ -34,18 +27,56 @@
  let operands = prompt('How many operands do you want to use?', 'Enrer from 1 to 5');
 
   for (;operands == 0 || operands > 5;operands++) {
-   operands = prompt('How many operands do you want to use?', 'Enrer from 1 to 5');
+   operands = prompt('Enrer from 1 to 5', '');
  };
- 
+
+
 
 // Вводим операнды
- for (  let answer2 = 0; answer2 <= operands; answer2++) {
-     answer2 = prompt('Enter operand!', '');
-   };
-  alert(answer);
+
+let num = [];
+
+if (operands == 4) {
+  for (let i = 0;i < operands;i++) {
+   num +=  prompt('Enter operand!');
+  }
+}else if (operands == 3){
+  for (i = 0;i < 3;i++){
+  num += prompt('Enter operand!');
+  }
+}else if (operands == 2) {
+  for (;i < 2;i++) {
+  num += prompt('Enter operand!');
+  }
+}else if (operands == 1) {
+  for (;i < 1;i++) {
+  num += prompt('Enter operand!');
+  }
+};
+
+
+// console.log(num);
+
+
+//Вычисляем ...
+
+
+
+//-----------------------------------------------------------------
+// let num = prompt('Enter operand!');
+// for (let i = 0;i <=num;i++) {
+//   prompt('Enter operand!','');
+// }
+
+//  for (  let answer2 = 0;  answer2 <= operands; answer2++) {
+//      answer2 = prompt('Enter operand!', '');
+//    };
+//    alert(answer);
+//----------------------------------------------------------------
 
 
 // Я запутался в том  как выввести на каждый операнд свой prompt, где хранить полученое число, и потом как осуществить  вычесления с ними... 
+
 
 
 
