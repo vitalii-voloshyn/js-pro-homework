@@ -14,45 +14,47 @@
 //   return num + num;
 // };
 //--------------------------
+
+
 // Спрашеваем какое действие выполнять
- let answer = prompt('What do you want, add,sub,muit, or div?', '');
-
- while (answer == '' || answer == null) {
-   answer = prompt('select action!', '');
+//  let answer = prompt('What do you want, add,sub,muit, or div?', '');
+//      ansver = 0;
+//  while (answer == 0 || answer == null ) {
+//    answer = prompt('select action!', '');
    
- };
+//  };
 
 
-// Количество орерандов 
- let operands = prompt('How many operands do you want to use?', 'Enrer from 1 to 5');
+// // Количество орерандов 
+//  let operands = prompt('How many operands do you want to use?', 'Enrer from 1 to 5');
 
-  for (;operands == 0 || operands > 5;operands++) {
-   operands = prompt('Enrer from 1 to 5', '');
- };
+//   for (;operands == 0 || operands > 5;operands++) {
+//    operands = prompt('Enrer from 1 to 5', '');
+//  };
 
 
 
-// Вводим операнды
+// // Вводим операнды
 
-let num = [];
+// let num = [];
 
-if (operands == 4) {
-  for (let i = 0;i < operands;i++) {
-   num +=  prompt('Enter operand!');
-  }
-}else if (operands == 3){
-  for (i = 0;i < 3;i++){
-  num += prompt('Enter operand!');
-  }
-}else if (operands == 2) {
-  for (;i < 2;i++) {
-  num += prompt('Enter operand!');
-  }
-}else if (operands == 1) {
-  for (;i < 1;i++) {
-  num += prompt('Enter operand!');
-  }
-};
+// if (operands == 4) {
+//   for (let i = 0;i < operands;i++) {
+//    num +=  prompt('Enter operand!');
+//   }
+// }else if (operands == 3){
+//   for (i = 0;i < 3;i++){
+//   num += prompt('Enter operand!');
+//   }
+// }else if (operands == 2) {
+//   for (;i < 2;i++) {
+//   num += prompt('Enter operand!');
+//   }
+// }else if (operands == 1) {
+//   for (;i < 1;i++) {
+//   num += prompt('Enter operand!');
+//   }
+// };
 
 
 // console.log(num);
@@ -75,14 +77,59 @@ if (operands == 4) {
 //----------------------------------------------------------------
 
 
-// Я запутался в том  как выввести на каждый операнд свой prompt, где хранить полученое число, и потом как осуществить  вычесления с ними... 
 
 
 
+// Решение:
+'use strict';
+//1 
+
+let operator = prompt('Chouse operator add, mult, sub,div?', '');
+let operandsCount;
+let operand;
+let result = null;
 
 
+do {
+  operator = prompt('Chouse operator!', '');
+}while(operator != 'add' &&
+       operator != 'sub' &&
+       operator != 'mult' &&
+       operator != 'div'  
+);
 
+console.log(operator);
 
+//2 Ask how many operands?
+
+do {
+  operandsCount = +prompt('How many operands do you want to use?', '');
+}while (isNaN(operandsCount) || 
+operandsCount <=0 ||
+operandsCount >=5   
+);
+console.log(operandsCount);
+
+//3  
+ for (let i = 1; i <=operandsCount;i++){
+   do{ 
+     operand = +prompt('operand' + i, '0');
+   }while(isNaN(operand))
+
+   if (result === null ) {
+    result = operand;
+    continue;
+ } 
+
+ switch(operator) {
+  case 'add': result += operand;break;
+  case 'div': result /= operand;break;
+  case 'mult': result *= operand;break;
+  case 'sub': result -= operand;break;
+ }
+
+};
+alert('Result' + '=' + result); 
 
 
 
