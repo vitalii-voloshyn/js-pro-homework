@@ -9,12 +9,6 @@
 
 
 // Решение:
-//-------------------------
-// function add() {     
-//   return num + num;
-// };
-//--------------------------
-
 
 // Спрашеваем какое действие выполнять
 //  let answer = prompt('What do you want, add,sub,muit, or div?', '');
@@ -32,11 +26,7 @@
 //    operands = prompt('Enrer from 1 to 5', '');
 //  };
 
-
-
 // // Вводим операнды
-
-// let num = [];
 
 // if (operands == 4) {
 //   for (let i = 0;i < operands;i++) {
@@ -56,31 +46,14 @@
 //   }
 // };
 
-
-// console.log(num);
-
-
-//Вычисляем ...
+// ---------------------------------------------------------------
 
 
 
 //-----------------------------------------------------------------
-// let num = prompt('Enter operand!');
-// for (let i = 0;i <=num;i++) {
-//   prompt('Enter operand!','');
-// }
-
-//  for (  let answer2 = 0;  answer2 <= operands; answer2++) {
-//      answer2 = prompt('Enter operand!', '');
-//    };
-//    alert(answer);
-//----------------------------------------------------------------
 
 
-
-
-
-// Решение:
+// Решение в классе:
 'use strict';
 //1 
 
@@ -98,7 +71,7 @@ do {
        operator != 'div'  
 );
 
-console.log(operator);
+
 
 //2 Ask how many operands?
 
