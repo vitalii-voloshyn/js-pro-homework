@@ -15,11 +15,12 @@
 
 'use strict';
  
+
+//-------------------------------- Variant 2 ---------------------
 //1 Спрашеваeм действие у пользователя
 
  function getOperator() {
   let operator = prompt('Chouse operator, add,sub,div,mult', '');
-      operator = operator.toLowerCase();
   if(operator !== 'add' &&
      operator !== 'sub' &&
      operator !== 'div' &&
@@ -83,8 +84,68 @@ alert('Result' + ' = ' + result);
 
 
 
+// Homework number for Variant 1
+//-------------------------------------------------
+/*
+let operator;
+let argumentA = null;
+let argumentB = null;
+// let result = null;
+
+//1 Ask what user does want to do?
+
+do {
+   operator = prompt('Chouse operator add,sub,div,mult?', '');
+}while(operator != 'add' &&
+       operator != 'sub' &&
+       operator != 'div' &&
+       operator != 'mult' 
+)
 
 
+//2 Enter arguments ------------------------------
+do{argumentA = +prompt('Enter first operand!', '');
+}while(isNaN(argumentA) ||
+             argumentA <=0
+)
+
+do{argumentB = +prompt('Enter second operand!', '')
+}while(isNaN(argumentB) ||
+             argumentB <=0
+)
+
+
+  //-----------declared function------------------------
+ function add(){
+   return  argumentA + argumentB;
+  };
+ 
+ function sub(){
+   return argumentA - argumentB;
+ };
+
+ function div(){
+   return argumentA / argumentB;
+ };
+
+ function mult(){
+   return argumentA * argumentB;
+ };
+
+
+ //------------- Calculate----------------------------
+switch(operator){
+  case 'add': alert('Result' + ' = ' + add());
+  break;
+  case 'sub': alert('Result' + ' = ' + sub());
+  break;
+  case 'div': alert('Result' + ' = ' + div());
+  break;
+  case 'mult': alert('Result' + ' = ' + mult());
+  break;
+};
+
+*/
 
 
 
