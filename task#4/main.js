@@ -32,32 +32,20 @@
  };
 
 
-//2 Спрашеваем первый аргумент 
-
-function getArgument1() {
-  let argument1 = +prompt('Enter first operand!', '');
-  if(isNaN(argument1) ||
-      argument1 <=0
-  ){
-    alert('Enter a number!!');
-    return getArgument1()
-  }
-  return argument1;
-};
-
+//2 Спрашеваем первый  аргумент 
 //3 Спрашеваем второй аргумент
+// Look at dowm comments how it made! 
 
-function getArgument2() {
-  let argument2 = +prompt('Enter second operand!', '');
-  if(isNaN(argument2) ||
-      argument2 <=0
-  ){
-    alert('Enter a number!!');
-    return getArgument2()
-  }
-  return argument2;
+function getArgument(argumentIndex) {
+  let argument;
+  do{
+    argument = +prompt('Enter first operand!',+ argumentIndex + '');
+  }while(isNaN(argument) ||
+          argument <=0
+  )
+  return argument;
 };
-// console.log(getArgument2());
+
 
 // Выполняем действие и выводим результат
 
@@ -73,8 +61,8 @@ function calculate(argument1, argument2, operator) {
 }
 
   let operator  = getOperator();
-  let argument1 = getArgument1();
-  let argument2 = getArgument2();
+  let argument1 = getArgument(1);
+  let argument2 = getArgument(2);
   let result    = calculate(argument1, argument2, operator);
 
 alert('Result' + ' = ' + result);
@@ -86,7 +74,9 @@ alert('Result' + ' = ' + result);
 
 // Homework number for Variant 1
 //-------------------------------------------------
+
 /*
+
 let operator;
 let argumentA = null;
 let argumentB = null;
@@ -104,53 +94,112 @@ do {
 
 
 //2 Enter arguments ------------------------------
-do{argumentA = +prompt('Enter first operand!', '');
-}while(isNaN(argumentA) ||
-             argumentA <=0
+do{
+  argumentA = +prompt('Enter first operand!', '');
+  }while(isNaN(argumentA) ||
+          argumentA <=0
 )
 
-do{argumentB = +prompt('Enter second operand!', '')
-}while(isNaN(argumentB) ||
-             argumentB <=0
+do{
+  argumentB = +prompt('Enter second operand!', '')
+ }while(isNaN(argumentB) ||
+        argumentB <=0
 )
 
 
   //-----------declared function------------------------
- function add(){
-   return  argumentA + argumentB;
+ function add(a,b){
+   return  a + b;
   };
  
- function sub(){
-   return argumentA - argumentB;
+ function sub(a,b){
+   return a - b;
  };
 
- function div(){
-   return argumentA / argumentB;
+ function div(a,b){
+   return a / b;
  };
 
- function mult(){
-   return argumentA * argumentB;
+ function mult(a,b){
+   return a * b;
  };
 
 
  //------------- Calculate----------------------------
 switch(operator){
-  case 'add': alert('Result' + ' = ' + add());
+  case 'add': alert('Result' + ' = ' + add(argumentA, argumentB));
   break;
-  case 'sub': alert('Result' + ' = ' + sub());
+  case 'sub': alert('Result' + ' = ' + sub(argumentA, argumentB));
   break;
-  case 'div': alert('Result' + ' = ' + div());
+  case 'div': alert('Result' + ' = ' + div(argumentA, argumentB));
   break;
-  case 'mult': alert('Result' + ' = ' + mult());
+  case 'mult': alert('Result' + ' = ' + mult(argumentA, argumentB));
   break;
 };
 
 */
 
 
+//-------------------------------------------------------------
 
 
+// Modernized finction getArgument...
 
+/*
+//2 Спрашеваем первый аргумент 
+function getArgument1() {
+  let argument1 = +prompt('Enter first operand!', '');
+  if(isNaN(argument1) ||
+      argument1 <=0
+  ){
+    alert('Enter a number!!');
+    return getArgument1()
+  }
+  return argument1;
+}
+
+//3 Спрашеваем второй аргумент
+function getArgument2() {
+  let argument2 = +prompt('Enter second operand!', '');
+  if(isNaN(argument2) ||
+      argument2 <=0
+  ){
+    alert('Enter a number!!');
+    return getArgument2()
+  }
+  return argument2;
+}
+
+// ----------------  SOLUTION ---------------------
+
+// function getArgument(argumentIndex) {
+//   let argument;
+//     do{
+//       argument  = +prompt('Enter operand!', + argumentIndex +  '');  
+//      }while(isNaN(argument) ||
+//             argument <=0
+//      )
+//   return argument;
+// }
+
+// С помощью аргумента (argumentIndex) в prompt видно счет введенных операндов.
+// Для этого при вызове функции указваем аргумент 1, и 2.  
+
+// Цикл do...while,  будет выполнять prompt, пока в while(условие true)
+// Когда условие нарушится, а именно в prompt введем число..
+// isNaN - соответствует строке а число нет поэтому цикл розарвется
+// Сработает return argument - и мы получит значение с prompt!
+
+
+// console.log( getArgument(1));
+// console.log(getArgument(2));
+
+// let argument1 = getArgument(1);
+// let argument2 = getArgument(2);
+
+//----------------------------------------------------------------
+
+*/
 
 
 
