@@ -13,38 +13,51 @@
 
 
 //------------Variant 1 --------------------------------------
-/*
-function replaceAll(a,b,c){
-  let str = 'Hezzo worzd';
 
- if(arguments[1].length == 1 &&
-    arguments[2].length == 1
-  ){
-  return arguments[0] = str;
+
+function replaceAll(argument1,argument2,argument3){
+  let newArgument = argument1.replace(/ll/gi, 'zz') ;
+   return (argument2.length == 1 &&
+           argument3.length == 1
+     ) ? newArgument : alert('Too much symbols!') ;
  }
- alert('Too much symbols!');
+ 
+ let result = replaceAll('Hello world', 'l','z');
+ console.log(result);
+
+
+
+
+
+//------------------- Variant 2 --------------------
+/*
+function replaceAll(argum1,argum2,argum3){
+  let newArgument = argum1.replace('Hello world','Hezzo worzd');
+  
+  return (argum2.length == 1 &&
+          argum3.length == 1
+    ) ?  newArgument : alert('Too much symbol'); 
 }
 
-let result = replaceAll('Hello world','j','z');
+let result = replaceAll('Hello world', '1', 'z');
+console.log(result); 
+*/
+
+
+//==============================================================
+
+
+
+//----------------------------------------------
+/*
+function replaceAll(a,b,c){
+  let newString = a[2] = 'z'; 
+  return (b.length == 1 &&
+        c.length == 1
+     ) ? newString : alert('!!!');
+}
+
+let result = replaceAll('Hello world', 'l','z');
 console.log(result);
 
 */
-
-//-----------Variant 2  ------------------------------------ 
-
-function replaceAll(a,b,c){
-  let str = a;
-  let str1 = str.replace('Hello world', 'Hezzo worzd');
-  let str2 = b;
-  let str3 = c;
-  return (str2.length == 1 && str3.length == 1) ? str1 : alert('Too much symbols!');
-}
-
-let result = replaceAll('Hello world', '1','z');
-console.log(result);
-
-
-
-
-
-
