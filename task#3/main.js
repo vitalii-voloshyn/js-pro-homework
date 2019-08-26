@@ -57,7 +57,7 @@
 'use strict';
 //1 
 
-let operator = prompt('Chouse operator add, mult, sub,div?', '');
+let operator;
 let operandsCount;
 let operand;
 let result = null;
@@ -84,7 +84,7 @@ operandsCount >=5
 console.log(operandsCount);
 
 //3  
- for (let i = 1; i <=operandsCount;i++){
+ for (let i = 1; i!=operandsCount;i++){
    do{ 
      operand = +prompt('operand' + i, '0');
    }while(isNaN(operand))
