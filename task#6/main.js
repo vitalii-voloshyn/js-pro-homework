@@ -28,85 +28,89 @@
 
 // 1 Задача
 
-/*
-function isValidNumber(value){
-  return !(isNaN(value) || value === '' || value === null );
+
+function isValidNumber(value) {
+  return !(isNaN(value) || value === '' || value === null);
 }
 
 
- function getNumber(){
-   let number = prompt('Enter a number', '');
+function getNumber() {
+  let number = prompt('Enter a number', '');
 
-   return !isValidNumber(number) ||
-    number == 0  ? getNumber()  : number;
+  return !isValidNumber(number) ||
+    number == 0 ? getNumber() : number;
 
- }
+}
+
+
+function getEvenNum(value) {
+  let evenCount = 0;
+  let arrNumber = value.split('').map(Number);
+
+  for (let i = 0; i < arrNumber.length; i++) {
+    if (value[i] % 2 == 0) {
+      evenCount += 1;
+    }
+  }
+  return evenCount;
+}
+
 
 let numbers = getNumber();
-let arrNumbers = numbers.split('').map(Number);
- 
-
-function getEvenNum(value){
-let evenCount = 0;
-
-for(let i = 0;i < value.length;i++){
-  if (value[i] % 2 == 0){
-   evenCount += 1;
-  }
- }
-return evenCount;
-}
-
-let result = getEvenNum(arrNumbers);
+let result = getEvenNum(numbers);
 
 alert('Even numbers' + ' - ' + result);
-//console.log(result);
 
-*/
+
+
 
 
 //---------------------------------------------------------------
 
 // 2 Задача
 
-
 /*
-function randomNumber(){
-  let someNumber;
-  someNumber = Math.floor((Math.random() * 10) + 1 );
-  return someNumber;
+
+function randomNumber(min, max) {
+  let generatedNum;
+
+  generatedNum = Math.floor((Math.random() * (max - min) + min));
+
+  return generatedNum;
 }
 
 
-let prNumber = randomNumber();
 
+function checkNumbers(generatedNum) {
+  let userAnswer;
+  let result = 0;
+  let userNumber;
 
-function checkNumbers(someNumber){
- let userAnswer;
- let result = 0;
- let userNumber;
-
- do{
-  userNumber = +prompt('Enter a number от 0 до 10','');
-  userNumber = parseInt(userNumber);
- }while(userNumber !== someNumber || 
-              isNaN(userNumber)   ||
-              userNumber === null ||
-               userNumber > 10   
+  do {
+    userNumber = +prompt('Enter a number от 0 до 10', '');
+    userNumber = parseInt(userNumber);
+  } while (userNumber !== generatedNum ||
+  isNaN(userNumber) ||
+  userNumber === null ||
+    userNumber > 10
   )
 
-if(userNumber === someNumber){
-   result += 10;
-   userAnswer = confirm('You Guess!!! Do you want try again?');
-}
-    
- return (userAnswer !== true) ? alert('Result ' + result + ' points ') : location.reload();
+  if (userNumber === generatedNum) {
+    result += 10;
+    userAnswer = confirm('You Guess!!! Do you want try again?');
+  }
+
+  return (userAnswer !== true) ? alert('Result ' + result + ' points ') : location.reload();
 }
 
 
+
+let prNumber = randomNumber(0, 10);
 let guessResult = checkNumbers(prNumber);
 
+
 */
+
 //------------------------------------------------------
 
 //-------------------------------------------------------
@@ -119,6 +123,7 @@ let guessResult = checkNumbers(prNumber);
 
 // const objCopy = copy(obj);
 
+/*
 
 const obj = {
   name: 'Alex',
@@ -130,19 +135,19 @@ const obj = {
 };
 
 
-function copy(obj){
-  
+function copy(obj) {
+
   let copyObj = {};
 
-  for(let key in obj){
-    if( typeof(obj[key]) === 'object' 
-        && obj[key] !== null){
+  for (let key in obj) {
+    if (typeof (obj[key]) === 'object'
+      && obj[key] !== null) {
 
-     copyObj[key] = copy(obj[key]);
-    
-     }else{
-       copyObj[key] = obj[key];
-     }
+      copyObj[key] = copy(obj[key]);
+
+    } else {
+      copyObj[key] = obj[key];
+    }
   }
   return copyObj;
 }
@@ -151,6 +156,8 @@ function copy(obj){
 console.log(obj);
 const objCopy = copy(obj);
 console.log(objCopy);
+
+*/
 
 
 
@@ -180,7 +187,7 @@ function isValideNumber(value){
 /*
 function copy(obj){
  let copyObj = {};
- 
+
  for(let key in obj){
    if(typeof obj[key] !== 'object'){
      copyObj[key] = obj[key];
@@ -211,7 +218,7 @@ const copyObj = {};
      return copyObj;
    }
  }
- 
+
 
 
  console.log(obj);
