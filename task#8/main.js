@@ -11,6 +11,35 @@
 
 'use strict';
 
+//---------------------- 2й вариант -----------------
+
+const btn = document.querySelector('#addBtn');
+
+btn.addEventListener('click', addNewElement);
+btn.addEventListener('mouseup', deleteElement);
+
+
+
+function addNewElement() {
+  const list = document.querySelector('#list');
+  const inputValue = document.querySelector('#count').value;
+
+  for (let i = 0; i < inputValue; i++) {
+    const newLi = document.createElement('li');
+    list.appendChild(newLi);
+    newLi.innerText = 'Number li ' + (i + 1);
+  }
+}
+
+
+function deleteElement() {
+  while (list.hasChildNodes()) {
+    list.removeChild(list.lastChild);
+  }
+}
+
+//=========================== 1й - Вариант =========================================
+/*
 const btn = document.querySelector('#addBtn');
 
 btn.addEventListener('click', addNewElement);
@@ -30,6 +59,4 @@ function addNewElement() {
 }
 
 
-
-
-
+*/
