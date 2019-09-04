@@ -121,6 +121,8 @@ function generateLi(index) {
 const listElement = document.getElementById('list');
 const countInputValue = document.getElementById('count');
 const addBtn = document.getElementById('addBtn');
+const liTemplate = document.getElementById('litemplate').innerHTML;
+
 
 addBtn.addEventListener('click', onAddButtonClick);
 
@@ -149,9 +151,5 @@ function generateNewList() {
 
 
 function generateLi(index) {
-  const li = document.createElement('li');
-  li.textContent = (index);
-  return document.getElementById('litemplate')
-                  .innerHTML.replace(`{index}`, index);
-  
+  return liTemplate.replace(`{index}`, index);
 }
