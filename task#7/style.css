@@ -40,3 +40,8 @@ div{
   border: 2px solid #000;
   margin-left: 100px;
 } 
+
+.error{
+  background-color: green;
+  border: 2px solid red;
+}

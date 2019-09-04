@@ -30,7 +30,7 @@
 
 
 function isValidNumber(value) {
-  return !(isNaN(value) || value === '' || value === null);
+  return !( isNaN(value) || value === '' || value === null);
 }
 
 
