@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto',sans-serif;
+}
+
+
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  margin-top: 50px;
+}
+
+.list__inner{
+  margin-top: 50px;
+}
+
+.list__title{
+  width: 500px;
+  background-color:rgb(86, 86, 187);
+  color: #fff;
+  text-align: center;
+}
+
+#list{
+  width: 500px;
+  min-height: 200px;
+  border-bottom: 3px solid rgb(86, 86, 187);
+  margin-bottom: 20px;
+}
+
+.li__default{
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(207, 206, 206);
+  font-size: 18px;
+  padding: 5px 30px 5px 10px;
+  border: 1px solid black;
+}
+
+.todo__form{
+ 
+}
+
+#input__field{
+ padding: 5px;
+ width: 250px;
+ height: 40px;
+}
+
+#btn{
+ height: 40px;
+ width: 100px;
+ border-radius: 20%;
+ outline: none;
+ margin-left: 50px;
+}
+
+.default__color{
+  background-color: rgb(207, 201, 201);
+  color: black;
+  border: 1px solid black;
+}
+
+.task__done{
+  background-color: green;
+  color: #fff;
+}
+
+.delete{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3px 5px;
+  color: black;
+  border: 1px solid black;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete:hover{
+  background-color: red;
+}

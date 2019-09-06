@@ -134,9 +134,9 @@ function onAddButtonClick() {
 
 
 
-function clearList() {           // эта функция не нужна так как template = '', 
-  listElement.innerHTML = '';    // и мы просто перезаписываем заново новое значение
-}
+//function clearList() {           // эта функция не нужна так как template = '', 
+ // listElement.innerHTML = '';    // и мы просто перезаписываем заново новое значение
+//}
 
 function generateNewList() {
   const count = +countInputValue.value || 0;
