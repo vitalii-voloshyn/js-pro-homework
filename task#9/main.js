@@ -21,6 +21,7 @@
 const btn = document.querySelector('#btn');
 const listElement = document.querySelector('#list');
 const todoForm = document.querySelector('#todo__form');
+//const inputValue = document.querySelector('#input__field').value;
 
 
 btn.addEventListener('click', onAddBtnClick);
@@ -36,7 +37,6 @@ function onAddBtnClick() {
 
 function addElementsTodoList() {
   const newLi = generateElements();
-  newLi.classList.add('li__default');
   listElement.append(newLi);
 }
 
@@ -49,8 +49,9 @@ function generateElements() {
   const delText = document.createTextNode('x');
   span.append(delText);
   span.classList.add('delete', 'delete:hover');
-  let inputValue = document.querySelector('#input__field').value;
-  li.textContent = inputValue;
+  const inputValue = document.querySelector('#input__field').value;
+  li.innerHTML =  inputValue;
+  li.classList.add('li__default');
   li.appendChild(span);
   return li;
 }
@@ -65,6 +66,8 @@ function onClickListElements(e) {
     element.remove();
   }
 }
+
+
 
 
 
