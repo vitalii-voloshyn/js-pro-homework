@@ -7,11 +7,6 @@
 // В каждом элемента списка есть кнопка удалить (крестик). При клике на него дело удаляется из списка
 
 
-
-
-
-// У меня не получилось сделать вывод li  с помощью шаблонизции.
-
 'use strict';
 
 
@@ -69,8 +64,7 @@ function onClickListElements(e) {
     e.target.classList.toggle('task__done');
   } else if (e.target.classList.contains('delete')) {
     deleteElement(e.target.parentNode);
-    //let element = e.target.parentNode;
-   // element.remove();
+     
   }
 }
 
@@ -78,4 +72,3 @@ function deleteElement(el){
  el.remove();
 }
  
-
