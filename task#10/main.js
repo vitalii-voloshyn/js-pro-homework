@@ -22,10 +22,10 @@ function createCalculator(value = 0) {
 
   let count = value;
 
-  function add(num = 0) { return count = count + num; }
-  function sub(num = 0) { return count = count - num; }
-  function divide(num = 0) { return count = count / num; }
-  function mult(num = 0) { return count = count * num; }
+  function add(num = 0) { return count  += num; }
+  function sub(num = 0) { return count -=  num; }
+  function divide(num = 0) { return count /= num; }
+  function mult(num = 0) { return count *= num; }
   function set(num = 0) { return count = num; }
 
   return {
