@@ -42,9 +42,6 @@ function Hamburger(size, stuffing) {
     this.size = size;
     this.stuffing = stuffing;
     this._toppings = [];
-    this.getTopping = function () {
-        return this._toppings;
-    }
 }
 
 
@@ -64,7 +61,7 @@ Hamburger.STUFFING_POTATO = "STUFFING_POTATO";
 
 Hamburger.STUFFINGS = {
     [Hamburger.STUFFING_CHEESE]: { price: 10, calories: 20 },
-    [Hamburger.STUFFING_SALAD]: { price: 20,calories: 5 },
+    [Hamburger.STUFFING_SALAD]: { price: 20, calories: 5 },
     [Hamburger.STUFFING_POTATO]: { price: 15, calories: 10 }
 };
 
@@ -80,6 +77,10 @@ Hamburger.TOPPINGS = {
 
 
 
+Hamburger.prototype.getTopping = function () {
+    return this._toppings;
+}
+
 
 Hamburger.prototype.addTopping = function (topping) {
     if (!this._toppings.includes(topping)) {
@@ -91,20 +92,20 @@ Hamburger.prototype.addTopping = function (topping) {
 
 
 Hamburger.prototype.calculateCalories = function () {
-    const caloriesArr = this._toppings.map(el => Hamburger.TOPPINGS[el].calories);
+    let caloriesArr = this._toppings.map(el => Hamburger.TOPPINGS[el].calories);
     caloriesArr.push(Hamburger.SIZES[this.size].calories,
         Hamburger.STUFFINGS[this.stuffing].calories);
-    let sumCalories = caloriesArr.reduce((accum, current) => accum + current, 0);
-    return sumCalories;
+    caloriesArr = caloriesArr.reduce((accum, current) => accum + current, 0);
+    return caloriesArr;
 }
 
 
 Hamburger.prototype.calculatePrice = function () {
-    const priceArr = this._toppings.map(el => Hamburger.TOPPINGS[el].price);
+    let priceArr = this._toppings.map(el => Hamburger.TOPPINGS[el].price);
     priceArr.push(Hamburger.SIZES[this.size].price,
         Hamburger.STUFFINGS[this.stuffing].price);
-    let sumPrice = priceArr.reduce((accum, current) => accum + current, 0);
-    return sumPrice;
+    priceArr = priceArr.reduce((accum, current) => accum + current, 0);
+    return priceArr;
 }
 
 
