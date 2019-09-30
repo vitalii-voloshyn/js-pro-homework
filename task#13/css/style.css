@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #222;
+}
+
+
+.gallery__wrapper{ 
+  max-width: 600px; 
+  display: block; 
+  margin: 0 auto; 
+  position: relative;
+}  
+
+
+.gallery__item{
+  text-align: center;
+  height: 100%; 
+  list-style: none;
+  display: none; 
+}
+
+
+ .gallery__item img{
+   width: 100%; 
+  display: block;
+ 
+} 
+
+
+ .show{
+  display: block;
+}
+
+
+.prev__btn,
+.next__btn{
+  width: 100px;
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 20px; 
+  text-align: center;
+  line-height: 50px;
+  transition: all .3s ease;
+  background-color: rgba(210, 210, 235, .2);
+  color: blue; 
+}
+
+
+.prev__btn:hover,
+.next__btn:hover{
+ background-color: rgba(210, 210, 235, 1);
+}
+
+
+ .prev__btn{
+  left: -30%;
+}
+
+
+.next__btn{
+  right: -30%;
+} 
+
+
+
+
+
+
+
+
