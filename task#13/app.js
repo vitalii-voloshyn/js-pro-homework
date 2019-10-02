@@ -31,8 +31,8 @@ class Gallery {
     this.elem = elem;
     this.currentVisible = null;
     this.totalItems = this.elem.children.length;
-    this.lastElem = this.elem.lastElementChild;
-    this.firstElem = this.elem.firstElementChild;
+    this.next = this.nexBtnClick.bind(this);
+    this.prev = this.prevBtnClick.bind(this);
     this.init();
   }
 
@@ -55,9 +55,6 @@ class Gallery {
   addGalleryClasses() {
     const totalItems = this.elem;
     document.body.firstChild.classList.add(Gallery.CLASS_WRAPPER);
-
-    this.firstElem.classList.add('first-item');
-    this.lastElem.classList.add('last-item');
 
     for (let i = 0; i < this.totalItems; i++) {
       totalItems.children[i].classList.add(Gallery.CLASS_ITEMS);
@@ -121,15 +118,10 @@ class Gallery {
   }
 
 
-  next() {
-    console.log('NEXT');
-
-  }
-
-
-  prev() {
-    console.log('PREV');
-  }
+setTime(){
+  setInterval(() => this.nexBtnClick() ,3000);
+}
+  
 
 }
 
@@ -140,7 +132,6 @@ Gallery.CLASS_ITEMS = 'gallery__item';
 
 
 const myGallery = new Gallery(document.getElementById('container'));
-
 
 
 
