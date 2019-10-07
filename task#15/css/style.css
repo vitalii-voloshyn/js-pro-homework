@@ -1,0 +1,95 @@
+
+/* style for main element div */
+.list-wrapper{
+  border: 1px solid black;
+  max-width: 800px;
+  margin: auto;
+  min-height: 300px;
+  position: relative;
+}
+
+/* Style for ul */
+.list-title{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: -30px;
+}
+
+/* Style for teg form */
+.list-form{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+  position: absolute;
+  padding: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+/* Style for li */
+.title-items{
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 1;
+  font-family: 'Roboto', sans-serif ;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 190px;
+  text-align: center;
+  margin-left: 0;
+}
+
+/* Style for actions btn */
+.btn-delete, .btn-add{
+  border: 1px solid red;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100px;
+  padding: 10px;
+  line-height: 24px;
+}
+
+.btn-add{
+  bottom: 0;
+  right: 0;
+  background-color: green;
+}
+
+.btn-delete{
+  top: 50px;
+  right: 0;
+  background-color: red;
+}
+
+/* Style for listContainer */
+.list-container{
+  border: 1px solid black;
+  max-width: 590px;
+  min-height: 100% ;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(64, 136, 177);
+  color: #fff;
+  flex: 1;
+}
+
+
+ 
+
+.item-ready {
+  background-color: red;
+  color: #fff;
+}
+
+.delete{
+  border: 3px solid yellow;
+}
