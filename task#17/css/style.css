@@ -1,0 +1,47 @@
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  border: 1px solid black;
+}
+
+.header-title{
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgb(197, 192, 192);
+}
+
+.user__nav-items{
+  list-style: none;
+}
+
+.user-item{
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid black;
+  padding: 20px 100px 20px 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: .3s all;
+  line-height: auto;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+ 
+.user-item:hover{
+  background-color: rgb(93, 95, 248);
+  color: #fff;
+}
+
+.user-container-info > div{
+  border: 1px solid rgb(47, 9, 218);
+  padding: 10px;
+}
