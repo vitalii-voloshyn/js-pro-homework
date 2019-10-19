@@ -1,0 +1,67 @@
+
+.container{
+  border: 1px solid black;
+}
+
+ .list-title{
+   border: 1px solid black;
+   background-color: grey;
+   text-transform: uppercase;
+   color: #fff;
+   font-size: 20px;
+ }
+
+ #users-list > div{
+   border: 1px solid black;
+   background-color: rgb(11, 9, 175);
+   color: #fff;
+   cursor: pointer;
+ }
+
+ #users-list > div:hover{
+   background-color:  rgb(56, 53, 243);
+ }
+
+ .btn-add-user{
+   width: 100%;
+   background-color: grey;
+   color: #fff;
+   margin-top: -30px;
+ }
+
+ .form-details{
+   display: flex;
+   flex-direction: column;
+ }
+
+
+ #formField{
+   max-width: 300px;
+   margin: 0 auto;
+ }
+
+
+ 
+ #formField input{
+  width: 100%;
+  margin-bottom: 20px;
+ }
+
+ #formField label{
+   margin: 0;
+ }
+
+.form-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+ .form-btn-save,
+ .form-btn-delete{
+  width: 100px;
+  text-transform: uppercase;
+  background-color: grey;
+  color: #fff;
+ }
+ 
+ 
