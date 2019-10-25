@@ -1,0 +1,23 @@
+
+.pagination-wrapper{
+  max-width: 1000px;
+  border: 2px solid blue;
+  margin: auto;
+  overflow: hidden;
+}
+
+.pagination-container{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-item{
+  padding: 15px;
+  font-size: 20px;
+  color: black;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}
