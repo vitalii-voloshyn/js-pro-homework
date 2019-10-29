@@ -81,6 +81,7 @@ function deleteStickerItem(stickerId){
 
  function init(){
   fetchNotes();
+  showeSticker();
  }
 
 function fetchNotes(){
@@ -88,6 +89,9 @@ function fetchNotes(){
  }
 
 
+ function showeSticker(){
+   
+ }
 
 
 
