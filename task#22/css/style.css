@@ -1,0 +1,87 @@
+
+
+
+
+/* ----------STYLIZATION UI-WIDGET ELEMENT--------------------- */
+
+.search-container{
+  padding-top: 50px;
+}
+
+.search-container > label{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.search-container > input{
+  max-width: 700px;
+  width: 100%;
+  padding: 5px 20px;
+}
+ 
+.ui-menu{
+  list-style: none;
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-menu-item{
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: rgb(65, 40, 173);
+  color: #fff;
+}
+
+.ui-menu-item:hover{
+  background-color: rgb(112, 81, 250);
+}
+
+.ui-helper-hidden-accessible > div{
+  display: none;
+}
+
+/* --------------- */
+
+/* STYLIZATION TEMPLATE */
+
+.user__info{
+  padding-top: 20px;
+}
+
+.user__avatar > img{
+  max-width: 200px;
+}
+
+.user__content{
+  display: flex;
+  flex-direction: column;
+}
+
+.user__content > div{
+  margin-bottom: 20px;
+}
+
+.user__content span{
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.user__link{
+ text-transform: uppercase;
+}
+
+.user__name,
+.user__followers{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.created__date{
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* ------------------------ */

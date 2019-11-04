@@ -109,12 +109,12 @@ $(function () {
 
 
   function renderNotes() {
-    const notesHtml = notes.map((item) => {
-      return $noteTemplate.replace(`{{title}}`, item.title)
-                          .replace(`{{description}}`, item.description)
-                          .replace(`{{id}}`, item.id)
-                          .replace(`{{leftPosition}}`, item.left)
-                          .replace(`{{topPosition}}`, item.top)
+    const notesHtml = notes.map(({id, title, description,left,top}) => {
+      return $noteTemplate.replace(`{{title}}`,title)
+                          .replace(`{{description}}`,description)
+                          .replace(`{{id}}`,id)
+                          .replace(`{{leftPosition}}`,left)
+                          .replace(`{{topPosition}}`,top)
     }).join('\n');
     $fieldInner.html(notesHtml);
   }
