@@ -1,0 +1,25 @@
+body{
+  background-color: rgb(163, 162, 162);
+}
+
+.todo-item{
+  border: 1px solid black;
+  position: relative;
+}
+
+
+.todo-item.done{
+  background-color:green;
+}
+
+.btn-delete{
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: block;
+}
+
