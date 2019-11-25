@@ -1,0 +1,18 @@
+body{
+  background-color: rgb(95, 91, 91);
+  color: #fff;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+#message{
+  padding: 5px 20px;
+}
+
+#btn-send{
+  cursor: pointer;
+}
